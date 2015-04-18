@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{113324E5-89F3-4D87-A627-55FBF408DF29}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wheres_My_Note</RootNamespace>
+    <AssemblyName>Wheres My Note</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Toub.Sound.Midi, Version=2.0.4.0, Culture=neutral, PublicKeyToken=9510c3608a1f0024">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Dlls\Toub.Sound.Midi.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlackPianoKey.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BlackPianoKey.Designer.cs">
+      <DependentUpon>BlackPianoKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGuitar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGuitar.Designer.cs">
+      <DependentUpon>frmGuitar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPiano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPiano.Designer.cs">
+      <DependentUpon>frmPiano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuitarFret.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GuitarFret.Designer.cs">
+      <DependentUpon>GuitarFret.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Note.cs" />
+    <Compile Include="Notes.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BlackPianoKey.resx">
+      <DependentUpon>BlackPianoKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGuitar.resx">
+      <DependentUpon>frmGuitar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPiano.resx">
+      <DependentUpon>frmPiano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuitarFret.resx">
+      <DependentUpon>GuitarFret.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessage.resx">
+      <DependentUpon>frmMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WhitePianoKey.resx">
+      <DependentUpon>WhitePianoKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="frmMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessage.Designer.cs">
+      <DependentUpon>frmMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tunings.cs" />
+    <Compile Include="WhitePianoKey.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WhitePianoKey.Designer.cs">
+      <DependentUpon>WhitePianoKey.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fret.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guitar_Fretless.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guitar_Fretless_Nutless.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guitar_Fretless-Dotless.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nut.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Whole.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MapleFret.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MapleSteel.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RosewoodFret.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RosewoodSteel.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RosewoodFret_Dot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RosewoodFret_2Dots.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MapleFret_Dot.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MapleFret_2Dots.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MapleDot.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RosewoodDot.JPG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
